@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(24, 24, 24);
+    color: #fff;
+}
+
+.tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: 1000px;
+    margin: 1rem;
+}
+
+img{
+    margin: 1rem;
+    outline: 8px ridge rgb(172, 137, 48);
+}
+
