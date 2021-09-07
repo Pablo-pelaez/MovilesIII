@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let tarjetas = document.querySelector(".tarjetas");
     let numIntentosGanados = [];
     let intentos = document.querySelector('.resultado');
+    let title = document.querySelector('#title');
 
     imagenes.sort( ()=> .2 - Math.random() )
 
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function(){
         this.setAttribute('src',imagenes[imgId].img);
         }
         if(imgElegida.length === 2){
-            setTimeout(compararImagen, 500)
+            setTimeout(compararImagen, 200)
             
         }
     }
@@ -95,13 +96,16 @@ document.addEventListener('DOMContentLoaded', function(){
             imagen[opcionDosId].setAttribute('src', 'img/img6.jpg');
         }
 
+
+
         imgElegida = [];
         imgElegidaId = [];
 
         intentos.textContent = numIntentosGanados.length;
 
         if(numIntentosGanados.length === imagenes.length / 2){
-            intentos.textContent = 'Ganaste';
+            //intentos.textContent = 'Ganaste';
+            title.innerHTML = "Ganaste";
         }
 
     }
