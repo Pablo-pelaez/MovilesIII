@@ -4,7 +4,7 @@ import Article01 from "./articles/articles01";
 const Container = () => {
     //Primero se pasa la varible y luego la función que va a modificar el estado de la variable
 
-    const [articles, setArticle] = useState(articles = [
+    const [articles, setArticle] = useState([
         {
             id: 1,
             title: "TITLE HEADING 1",
@@ -28,13 +28,15 @@ const Container = () => {
 
     return (
         <div className="col-sm-8">
-            { articles.map( article => {
-                <Article01 
-                key={article.id}
-                title={article.title}
-                date={article.date}
-                description={article.description}
-                />
+            {articles.map(article => {
+                return (
+                    <Article01
+                        key={article.id}
+                        title={article.title}
+                        date={article.date}
+                        description={article.description}
+                    />
+                )
             })}
         </div>
     )
