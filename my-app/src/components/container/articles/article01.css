@@ -1,0 +1,9 @@
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  
+  .fakeimg:hover{
+    height: 200px;
+    background-color: rgb(121, 121, 121);
+  }
